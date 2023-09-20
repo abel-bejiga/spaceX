@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: white;
+  color: black;
+}
+body {
+  overflow-x: hidden;
+
+}
+
+.anime {
+  transition: all 0.5s ease;
+}
+
+.slideIn {
+  animation: slideIn 1s ease-out forwards;
+}
+.slideOut {
+  animation: slideOut 1s ease-out backwards;
+}
+
+@keyframes slideIn {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0%);}
+}
+
+@keyframes slideOut {
+  from {transform: translateX(0%);}
+  to {transform: translateX(100%);}
+}
