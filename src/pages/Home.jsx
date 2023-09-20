@@ -2,12 +2,12 @@ import React from 'react'
 import { pages } from '../data/data'
 
 
-const Home = () => {
+const Home = ({ menuOpen, setMenuOpen }) => {
   return (
     <>
-        <div className='w-full '>
+        <div onClick={() => menuOpen ? setMenuOpen(false) : null} className='w-full '>
             {pages.map((page, index) => (
-                <div key={index} className='h-screen w-full' style={{background: `url(${page.img}) center/cover no-repeat`}}>
+                <div key={index}className='h-screen w-full' style={{background: `url(${page.img}) center/cover no-repeat`}}>
                     <div className='w-full h-full max-w-[1400px] m-auto '>
                         <div className='w-1/2 max-w-[520px] text-white relative top-3/4 left-[50px]'>
                             <p className='text-xl uppercase'>{page.label}</p>
