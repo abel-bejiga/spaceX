@@ -4,7 +4,7 @@ const Logo = () => {
 
   return (
     <>
-         <div className='w-60'>
+         <div className='xl:w-60 w-40'>
          <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" alt="SpaceX Logo">
             <title>SpaceX Logo</title>
             <g className="letter_s">

@@ -6,8 +6,13 @@
   background-color: white;
   color: black;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
 }
 
@@ -16,10 +21,35 @@ body {
 }
 
 .slideIn {
-  animation: slideIn 1s ease-out forwards;
+  animation: slideIn 0.5s ease-out forwards;
 }
 .slideOut {
-  animation: slideOut 1s ease-out backwards;
+  animation: slideOut 0.5s ease-out backwards;
+}
+.bouncingAngle {
+  animation: bounceAngle 4s ease-in-out forwards infinite;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.blackBg-down {
+  animation: bgDown 0.3s ease forwards;
+}
+.blackBg-up {
+  animation: bgUp 0.3s ease forwards;
+}
+
+.blackBgSM-down {
+  animation: bgSmDown 0.3s ease forwards;
+}
+.blackBgSM-up {
+  animation: bgSmUp 0.3s ease forwards;
 }
 
 @keyframes slideIn {
@@ -30,4 +60,67 @@ body {
 @keyframes slideOut {
   from {transform: translateX(0%);}
   to {transform: translateX(100%);}
+}
+
+@keyframes bounceAngle {
+  0%{opacity: 0; transform: translateY(0);}
+  50%{opacity: 1; transform: translateY(20px);}
+  100%{opacity: 0; transform: translateY(0);}
+
+}
+
+@keyframes fadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
+@keyframes bgDown {
+  from{height: 0;}
+  to{height: 100px;}
+}
+
+@keyframes bgUp {
+  from{height: 100px;}
+  to{height: 0;}
+}
+@keyframes bgSmDown {
+  from{height: 0;}
+  to{height: 50px;}
+}
+
+@keyframes bgSmUp {
+  from{height: 50px;}
+  to{height: 0;}
+}
+
+.hoverEff {
+  position: relative;
+  overflow: hidden;
+}
+
+.hoverEff::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: top 0.2s;
+  
+}
+
+.hoverEff:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.hoverEff:hover::before {
+  top: 0;
+  
 }

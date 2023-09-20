@@ -17,6 +17,7 @@ export const navItems = [
     {label: 'Starlink', path: ''},
 ]
 
+
 export const menuItems = [
     {label: 'Mission', path: ''},
     {label: 'Launches', path: ''},
@@ -24,11 +25,28 @@ export const menuItems = [
     {label: 'Updates', path: ''},
     {label: 'Shop', path: ''},
 ]
+
+export const mobileMenu = [
+    {label: 'Falcon9', path: ''},
+    {label: 'Falcon heavy', path: ''},
+    {label: 'Dragon', path: ''},
+    {label: 'Starship', path: ''},
+    {label: 'Human spaceflight', path: ''},
+    {label: 'Rideshare', path: ''},
+    {label: 'Starshield', path: ''},
+    {label: 'Starlink', path: ''},
+    {label: 'Mission', path: ''},
+    {label: 'Launches', path: ''},
+    {label: 'Careers', path: ''},
+    {label: 'Updates', path: ''},
+    {label: 'Shop', path: ''},
+]
+
 export const pages = [
     {label: 'Upcoming launch', name: 'starlink mission', img: HeroImg},
     {label: 'Recent launch', name: 'starlink mission', img: Hero2},
-    {label: 'Completed mission', name: 'dragon and crew-6 return to earth', img: Hero3},
-    {label: 'Starship flight test', img: HeroEnd},
+    {label: 'Completed mission', name: 'dragon and crew-6', name2: 'return to earth', img: Hero3},
+    {name: 'Starship flight test', img: HeroEnd},
 ]
 
 export const footer = [
